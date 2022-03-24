@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 body {
   color: hsl(300, 43%, 22%);
   font-family: 'Spartan', sans-serif;
@@ -6,13 +10,15 @@ body {
 
 main {
   width: 90%;
-  margin: auto;
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 h1 {
+  width: 75%;
+  margin: 1rem auto;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -30,17 +36,57 @@ li {
 
 .rating-list {
   width: 100%;
+  margin: 1rem auto;
 }
 
 .rating {
   background-color: hsl(300, 24%, 96%);
   border: 1px solid hsl(300, 24%, 96%);
-  border-radius: 3px;
-  margin: .5rem auto;
+  border-radius: 5px;
+  margin: 1rem auto;
   padding: .5rem;
 }
 
 .rating-header {
   font-weight: 700;
   padding-top: .5rem;
+}
+
+.review {
+  border: 1px solid hsl(300, 43%, 22%);
+  border-radius: 5px;
+  background-color: hsl(300, 43%, 22%);
+  color: hsl(300, 24%, 96%);
+  padding: 1.5rem;
+  text-align: start;
+  margin: 1rem auto;
+}
+
+.review-header {
+  display: flex;
+  align-self: flex-start;
+  padding-bottom: 1rem;
+}
+
+.review-header > span {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+.user-pfp {
+  width: 2rem;
+  height: auto;
+  border: 1px solid hsl(300, 43%, 22%);
+  border-radius: 50%;
+}
+
+.review-username {
+  color: hsl(0, 0%, 100%);
+  text-align: start;
+}
+
+.user-status {
+  color: hsl(333, 80%, 67%);
+  text-align: start;
 }
