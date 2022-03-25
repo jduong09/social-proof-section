@@ -10,10 +10,16 @@ body {
 
 main {
   width: 90%;
-  margin: 3rem auto;
+  height: 80%;
+  margin: 0 auto;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -89,4 +95,79 @@ li {
 .user-status {
   color: hsl(333, 80%, 67%);
   text-align: start;
+}
+
+@media (min-width: 767px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product-header {
+    flex: 2;
+    text-align: start;
+  }
+
+  h1 {
+    margin: 2rem 0 0 0;
+    width: 75%;
+  }
+
+  .product-statement {
+    width: 75%;
+  }
+
+  .rating-list {
+    flex: 2;
+    width: fit-content;
+  }
+
+  .rating-list > li:nth-child(1) {
+    margin-left: 1rem;
+    margin-right: 4rem;
+  } 
+
+  .rating-list > li:nth-child(2) {
+    margin-left: 3rem;
+    margin-right: 2rem;
+  }
+
+  .rating-list > li:nth-child(3) {
+    margin-left: 5rem;
+  }
+
+  .rating {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .rating-header {
+    padding-left: 1rem;
+  }
+
+  .reviews-list {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .review {
+    width: 30%;
+    height: 50%;
+  }
+
+  .reviews-list > li:nth-child(1) {
+    margin-right: 2rem;
+  }
+
+  .reviews-list > li:nth-child(2) {
+    position: relative;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .reviews-list > li:nth-child(3) {
+    position: relative; 
+    top: 2rem;
+  }
 }
