@@ -9,22 +9,26 @@ body {
 }
 
 main {
-  width: 90%;
-  height: 80%;
-  margin: 0 auto;
-  padding: 3rem;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-image: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
+  background-size: 100%, 50%;
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
 }
+
+.product-header {
+  width: 90%;
+  margin: 5rem auto 1rem auto;
+}
+
 
 h1 {
   width: 75%;
-  margin: 1rem auto;
+  margin: 0 auto 1rem auto;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -41,7 +45,7 @@ li {
 }
 
 .rating-list {
-  width: 100%;
+  width: 90%;
   margin: 1rem auto;
 }
 
@@ -56,6 +60,11 @@ li {
 .rating-header {
   font-weight: 700;
   padding-top: .5rem;
+}
+
+.reviews-list {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .review {
@@ -101,16 +110,26 @@ li {
   main {
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: space-evenly;
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
+    background-size: 40%, 80%;
+    background-position: top left, bottom right;
   }
 
   .product-header {
-    flex: 2;
+    flex: 1;
     text-align: start;
+    margin: 0;
   }
 
   h1 {
-    margin: 2rem 0 0 0;
+    font-size: 2.5rem;
     width: 75%;
+    margin: 0 0 1rem 0;
   }
 
   .product-statement {
@@ -118,8 +137,12 @@ li {
   }
 
   .rating-list {
-    flex: 2;
-    width: fit-content;
+    width: 45%;
+    margin: 0;
+  }
+  
+  .rating-header {
+    padding-left: 2rem;
   }
 
   .rating-list > li:nth-child(1) {
@@ -139,10 +162,7 @@ li {
   .rating {
     flex-direction: row;
     align-items: center;
-  }
-
-  .rating-header {
-    padding-left: 1rem;
+    margin: 0 auto 1rem auto;
   }
 
   .reviews-list {
@@ -153,7 +173,7 @@ li {
 
   .review {
     width: 30%;
-    height: 50%;
+    height: auto;
   }
 
   .reviews-list > li:nth-child(1) {
